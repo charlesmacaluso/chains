@@ -1,4 +1,8 @@
 Chains::Application.routes.draw do
+  
+	root :to => "processing_units#index"
+	devise_for :users
+  resources :comments
   resources :processing_units
 
   # The priority is based upon order of creation: first created -> highest priority.

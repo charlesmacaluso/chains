@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+// Include all twitter's javascripts
+//= require twitter/bootstrap
+//= require anjlab/datepicker
+//= require anjlab/timepicker
+//= require js-routes
 //= require turbolinks
 //= require_tree .

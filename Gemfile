@@ -4,7 +4,46 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+group :development, :test, :production do
+	gem 'mysql2'
+end
+
+# Use State Machine to build state machines
+gem 'state_machine'
+
+# Use Draper for implementing Decorators
+gem 'draper'
+
+# Use JS-Routes for Easy Routing in Javascript/AJAX
+gem 'js-routes'
+
+# Use Paperclip for attachments
+gem "paperclip", "~> 3.0"
+
+# Use Postgres in Production on Heroku
+group :production do
+	gem 'pg'
+end
+
+# Use Shoulda for easy testing and Mocha for Mocking and Stubbing and Capybara for Integration help
+group :test do
+	gem 'shoulda', '~> 3.5.0'
+#	gem 'mocha'
+# gem 'capybara'
+end
+
+# Use Devise for Authentication
+gem 'devise'
+
+# Use Simple Form for Form Creation
+gem 'simple_form'
+
+# Use Bootstrap 3.0 for Rails
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+                              
+# Use Bootstrap 3.0 Date and Time Pickers for Rails          
+gem 'anjlab-widgets'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,3 +82,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ruby '2.0.0'
+gem 'rails_12factor', group: :production
