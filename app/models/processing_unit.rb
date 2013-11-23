@@ -1,2 +1,12 @@
 class ProcessingUnit < ActiveRecord::Base
+# Is a representation of a physical processing unit
+
+has_many :comments, :as => :target
+
+# Should have a Owners
+has_many :owners
+
+# Should have Operators
+has_many :operators
+
 end

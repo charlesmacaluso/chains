@@ -1,9 +1,13 @@
 Chains::Application.routes.draw do
   
+  resources :organizations
+
 	root :to => "processing_units#index"
 	devise_for :users
   resources :comments
-  resources :processing_units
+  resources :processing_units do
+  	resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,10 +1,9 @@
-<h1>Listing processing_units</h1>
+<h1>Listing Processing Units</h1>
 
-<table>
+<table class="table table-condensed table-striped table-responsive table-bordered table-hover">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
+    	<th>Name</th>
       <th></th>
     </tr>
   </thead>
@@ -12,9 +11,8 @@
   <tbody>
     <% @processing_units.each do |processing_unit| %>
       <tr>
-        <td><%= link_to 'Show', processing_unit %></td>
-        <td><%= link_to 'Edit', edit_processing_unit_path(processing_unit) %></td>
-        <td><%= link_to 'Destroy', processing_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      	<td><%= link_to processing_unit.name, processing_unit %></td>
+        <td><center><%= link_to 'Edit', edit_processing_unit_path(processing_unit) %> | <%= link_to 'Destroy', processing_unit, method: :delete, data: { confirm: 'Are you sure?' } %></center></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Processing unit', new_processing_unit_path %>
+<%= link_to 'New Processing Unit', new_processing_unit_path %>

@@ -69,6 +69,6 @@ class ProcessingUnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def processing_unit_params
-      params[:processing_unit]
+      params[:processing_unit].permit(:name)
     end
 end
