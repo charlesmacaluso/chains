@@ -1,0 +1,17 @@
+<%= form_for(@processing_unit) do |f| %>
+  <% if @processing_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@processing_unit.errors.count, "error") %> prohibited this processing_unit from being saved:</h2>
+
+      <ul>
+      <% @processing_unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
