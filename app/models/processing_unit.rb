@@ -7,6 +7,6 @@ has_many :comments, :as => :target
 has_many :owners
 
 # Should have Operators
-has_many :operators
+
 
 end

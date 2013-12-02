@@ -1,10 +1,13 @@
 Chains::Application.routes.draw do
   
+  resources :ownerships
+
   resources :organizations
 
 	root :to => "processing_units#index"
+	
 	devise_for :users
-  resources :comments
+
   resources :processing_units do
   	resources :comments
   end

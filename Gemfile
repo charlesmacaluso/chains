@@ -38,6 +38,9 @@ gem 'devise'
 # Use Simple Form for Form Creation
 gem 'simple_form'
 
+# For Static Assets on Heroku
+gem 'rails_12factor', group: :production
+
 # Use Bootstrap 3.0 for Rails
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
