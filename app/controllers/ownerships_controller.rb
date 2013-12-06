@@ -70,6 +70,6 @@ class OwnershipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ownership_params
-      params[:ownership]
+      params[:ownership].permit(:owner_type, :owner_id, :owned_type, :owned_id)
     end
 end

@@ -11,5 +11,16 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
+	# Hack fix to get Shoulda-Matchers to work.  Need to pull this out when shoulda-Matchers
+	# goes to 2.4.0
+	include Shoulda::Matchers::ActiveRecord
+	extend Shoulda::Matchers::ActiveRecord
+	include Shoulda::Matchers::ActiveModel
+	extend Shoulda::Matchers::ActiveModel
+
   # Add more helper methods to be used by all tests here...
 end
+
+	class ActionController::TestCase
+  	include Devise::TestHelpers
+	end

@@ -44,6 +44,10 @@
   </div><!-- /.navbar-collapse -->
 </nav>
 
+<% if flash[:danger] %>
+	<p class="alert alert-danger alert-dismissable"><%= flash[:danger] %>
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></p>
+<% end %>
 <% if notice %>
 	<p class="alert alert-warning alert-dismissable"><%= notice %>
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></p>

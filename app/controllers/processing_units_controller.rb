@@ -1,6 +1,7 @@
 class ProcessingUnitsController < ApplicationController
   before_action :set_processing_unit, only: [:show, :edit, :update, :destroy]
-
+	before_action :require_login
+	
   # GET /processing_units
   # GET /processing_units.json
   def index
