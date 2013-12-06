@@ -1,5 +1,7 @@
 Chains::Application.routes.draw do
   
+  resources :capacities
+
   resources :ownerships
 
   resources :organizations

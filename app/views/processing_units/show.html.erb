@@ -2,6 +2,13 @@
 
 Name: <%= @processing_unit.name %> <br>
 
+<br>
+Capacity Changes:<br>
+<% @processing_unit.capacities.each do |capacity| %>
+	<%= capacity.effective_timestamp %>  | <%= capacity.value %><br>
+<% end %>
+<br>
+
 Comments: <br>
 <% @processing_unit.comments.each do |comment| %>
 	<%= comment.id %>
